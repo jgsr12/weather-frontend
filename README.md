@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Descripción del proyecto
 
-## Getting Started
+Este es un proyecto de [Next.js](https://nextjs.org) generado con [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app) framework para react.
 
-First, run the development server:
+## Configuración previa
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Antes de ejecutar el proyecto, crea un archivo `.env.local` (o `.env`) en la raíz con las variables de entorno necesarias, por ejemplo:
+
+```
+# Puerto de desarrollo (opcional)
+PORT=3000
+
+# URL del backend
+NEXT_PUBLIC_API_URL=http://localhost:4000
+
+# Otras variables...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Instalación y ejecución
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Instalar dependencias:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   ```bash
+   npm install
+   ```
+2. Iniciar el servidor de desarrollo:
 
-## Learn More
+   ```bash
+   npm run dev
+   ```
+3. Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación.
 
-To learn more about Next.js, take a look at the following resources:
+> La página se recarga automáticamente al editar archivos.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Compilación y despliegue
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Generar la versión de producción:
 
-## Deploy on Vercel
+   ```bash
+   npm run build
+   ```
+2. Iniciar el servidor en modo producción:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npm start
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Ejecución con Docker
+
+Si prefieres Docker, asegúrate de tener Docker Desktop abierto y ejecutándose, luego ejecuta:
+
+```bash
+docker-compose up --build
+```
+
+Esto construirá la imagen y levantará los contenedores definidos en `docker-compose.yml`.
+
+## Pruebas
+
+Para ejecutar tests unitarios o de integración:
+
+```bash
+npm run test
+```
